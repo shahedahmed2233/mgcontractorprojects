@@ -25,7 +25,7 @@ export function Gallery() {
   }, [active]);
 
   return (
-    <section className="section-pad bg-background">
+    <section id="gallery" className="section-pad bg-background">
       <div className="shell">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
