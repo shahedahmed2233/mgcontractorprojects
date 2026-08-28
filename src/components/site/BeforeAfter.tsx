@@ -46,8 +46,8 @@ function CompareSlider({ project }: { project: BeforeAfterProject }) {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div
-          className="absolute inset-0 overflow-hidden"
-          style={{ width: `${position}%` }}
+          className="absolute inset-0"
+          style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
           aria-hidden="true"
         >
           <img
@@ -57,9 +57,9 @@ function CompareSlider({ project }: { project: BeforeAfterProject }) {
             height={1080}
             loading="lazy"
             className="h-full w-full object-cover"
-            style={{ width: frameRef.current?.clientWidth ?? undefined }}
           />
         </div>
+
 
         <span className="pointer-events-none absolute left-3 top-3 bg-ink/85 px-2.5 py-1 font-display text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink-foreground">
           Before
